@@ -69,10 +69,6 @@ describe('Album', () => {
       const albums = getAlbums(['0sNOF9WDwhWunNAHPD3Baj', '0sNOF9WDwhWunNAHPD3Bag']);
       expect(fetchedStub).to.have.been
         .calledWith('https://api.spotify.com/v1/albums/?ids=0sNOF9WDwhWunNAHPD3Baj,0sNOF9WDwhWunNAHPD3Bag');
-
-      const albums2 = getAlbums(['2BTZIqw0ntH9MvilQ3ewNY', '0sNOF9WDwhWunNAHPD3Bay']);
-      expect(fetchedStub).to.have.been
-        .calledWith('https://api.spotify.com/v1/albums/?ids=0sNOF9WDwhWunNAHPD3Baj,0sNOF9WDwhWunNAHPD3Bag');
     });
 
     it('should return the JSON Data from the Promise', () => {
