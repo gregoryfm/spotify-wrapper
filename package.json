@@ -1,8 +1,8 @@
 {
-  "name": "spotify-wrapper",
-  "version": "1.0.0",
+  "name": "gfm-spotify-wrapper",
+  "version": "1.0.1",
   "description": "A wrapper to work with Spotify Web API",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "rimraf lib && ./node_modules/.bin/babel --out-dir lib src",
     "build:watch": "npm run build -- --watch",
@@ -15,6 +15,10 @@
     "test:coverage": "nyc npm test",
     "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
+  "files": [
+    "dist",
+    "lib"
+  ],
   "nyc": {
     "function": 80,
     "lines": 80,
@@ -43,9 +47,9 @@
   },
   "homepage": "https://github.com/gregoryfm/spotify-wrapper#readme",
   "dependencies": {
-    "gitignore": "^0.6.0"
   },
   "devDependencies": {
+    "gitignore": "^0.6.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
